@@ -1,4 +1,4 @@
-@import "./scssStyles/_mixins.scss";
+@import "./utils/_mixins.scss";
 
 * {
   box-sizing: border-box;
@@ -9,112 +9,7 @@
     user-select: none;
   }
 }
-
-:root {
-  --dark-mode: true;
-}
-
-html {
-  background-color: var(--page-bg);
-  scroll-behavior: smooth;
+body {
+  background-color: #535353;
   overflow-x: hidden;
-  font-family: "Nunito", sans-serif;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5 {
-  font-family: "Nunito-Bold", sans-serif;
-  margin: 0px;
-  padding: 0px;
-}
-
-a {
-  text-decoration: none;
-  color: var(--text-link);
-  transition: text-decoration-color 250ms;
-  cursor: pointer;
-  background: linear-gradient(to left, var(--text-link), var(--text-link));
-  background-size: 100% 2px, 0 2px;
-  background-position: 0% 100%, 0 100%;
-  background-repeat: no-repeat;
-  transition: background-size 400ms;
-}
-
-button {
-  all: unset;
-}
-
-input {
-  background-color: (--input-bg);
-}
-input[type="text"] {
-  color: var(--black);
-}
-::placeholder {
-  color: var(--placeholder-text);
-}
-
-a:hover {
-  transition: background-size 400ms;
-  background-size: 0% 2px, 100% 2px;
-}
-
-.no-link-style {
-  background: none !important;
-  text-decoration: none !important;
-  color: unset;
-}
-
-::-webkit-scrollbar {
-  width: 12px;
-  height: 12px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: var(--scrollbar-thumb-hover);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: var(--scrollbar-thumb);
-  background: var(--scrollbar-thumb);
-  border-radius: 3px;
-}
-
-::-webkit-scrollbar-track {
-  background: var(--scrollbar-track);
-  border-radius: 3px;
-}
-
-.content-container {
-  margin-top: 45px;
-  @include devices(tablet) {
-    margin-top: 0px;
-  }
-}
-
-.error-success-box-snackbar-fixed {
-  position: fixed;
-  bottom: 20px;
-  left: 0px;
-  z-index: 100;
-  @include devices(tablet) {
-    bottom: 65px;
-  }
-}
-
-.display-only-tablet {
-  display: none;
-  @include devices(tablet) {
-    display: unset;
-  }
-}
-
-.display-only-desktop {
-  display: unset;
-  @include devices(tablet) {
-    display: none;
-  }
 }
